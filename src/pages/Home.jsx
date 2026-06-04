@@ -1,9 +1,8 @@
-import Header from '../layout/layout';
+import Header from '../layout/Layout';
 
 function Home (){
     return (
         <section>
-        <Header />
             <h1>Home works</h1>
         </section>
     )

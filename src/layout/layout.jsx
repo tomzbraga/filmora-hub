@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import { useEffect } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router";
+import Header from "../components/Header";
 
 function Layout() {
   const { logado } = useAuth();
