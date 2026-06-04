@@ -1,25 +1,20 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router'
-import './App.css'
-import Login from './pages/login'
-
-function Home() {
-  return (
-    <main>
-      <h1>Bem-vindo à sua aplicação!</h1>
-    
-    </main>
-  )
-}
+import { BrowserRouter, Routes, Route, Link } from "react-router";
+import "./App.css";
+import Login from "./pages/login";
+import Home from "./pages/home";
+import Layout from "./layout/Layout";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+        </Route>
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default AppRoutes
+export default AppRoutes;
