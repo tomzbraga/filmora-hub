@@ -1,25 +1,17 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router'
-import './App.css'
-import Login from './pages/login'
-
-function Home() {
-  return (
-    <main>
-      <h1>Bem-vindo à sua aplicação!</h1>
-    
-    </main>
-  )
-}
+import { BrowserRouter, Routes, Route, Link } from "react-router";
+import "./App.css";
+import Login from "./pages/login";
 
 function AppRoutes() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <Routes>
+      <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
-  )
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="*" element={<Erro404 />} />
+    </Routes>
+  );
 }
 
-export default AppRoutes
+export default AppRoutes;
