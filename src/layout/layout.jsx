@@ -15,7 +15,7 @@ function Layout() {
   }, [logado, navigate]);
 
   return (
-    <div>
+    <div className="bg-blue-500">
       <Header />
       <main>
         <Outlet />
