@@ -1,8 +1,8 @@
 import Section from "../components/Section";
 import HeaderHome from "../components/HeaderHome";
 import SearchBar from "../components/SearchBar";
-import { getMovies } from "../service/Service";
 import { useEffect } from "react";
+import Novidades from "../components/Novidades";
 
 // A SearchBar é um componente que deve ser codificado separado, porém a sua chamada deve ser feita dentro do componente que irá listar os filmes
 
@@ -12,6 +12,7 @@ function Home() {
       <HeaderHome />
       <Section />
       <SearchBar />
+      <Novidades />
     </main>
   );
 }

@@ -1,10 +1,27 @@
 import axios from "axios";
 
-export async function getMovies() {
+/* 
+
+PARAMETROS DA API 
+
+Para acessar o que a API retorna recomendo que olhe a URL comentada no topo de cada funcao
+
+exemplo:
+
+no componente Novidades.jsx eu coloquei um console.log({ movies }) os parametros podem ser usados como:
+
+movies.title
+movies.id
+movies.poster_path
+
+*/
+
+// https://developer.themoviedb.org/reference/movie-now-playing-list
+export async function getNovidades() {
   try {
     const response = await axios({
       method: "get",
-      url: "https://api.themoviedb.org/3/discover/movie",
+      url: "https://api.themoviedb.org/3/movie/now_playing",
       params: {
         api_key: "a03dc348a47fa57d814f8290f647ee2c",
         language: "pt-BR",
@@ -14,6 +31,23 @@ export async function getMovies() {
     return response.data;
   } catch (error) {
     console.error("Erro ao carregar filmes:", error);
+    throw error;
+  }
+}
+
+export async function getPopulares() {
+  try {
+    const response = await axios({
+      method: 'get',
+      url: 'https://api.themoviedb.org/3/movie/popular',
+      params: {
+        api_key: "a03dc348a47fa57d814f8290f647ee2c",
+        language: "pt-BR"
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao carregar populares", error);
     throw error;
   }
 }

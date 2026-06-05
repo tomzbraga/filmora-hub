@@ -1,18 +1,24 @@
-import { useEffect } from "react";
-import { getMovies } from "../service/Service";
+import { useEffect, useState } from "react";
+import { getPopulares, getNovidades } from "../service/Service";
 
 export default function Novidades() {
-  const [movies, setMovies] = useStade([]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     async function listaFilmes() {
-      const dados = await getMovies();
-      setMovies(data.results);
+      const dados = await getNovidades();
+      setMovies(dados.results);
     }
     listaFilmes();
   }, []);
 
   console.log({ movies });
 
-  return <></>;
+  return (
+    <ul>
+      {movies.map((movie) => (
+        <li>{movie.title}</li>
+      ))}
+    </ul>
+  );
 }
