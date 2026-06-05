@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPopulares, getNovidades } from "../service/Service";
+import { getNovidades } from "../service/Service";
 
 export default function Novidades() {
   const [movies, setMovies] = useState([]);
