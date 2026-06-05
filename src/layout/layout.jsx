@@ -2,7 +2,6 @@ import { Outlet } from "react-router";
 import { useEffect } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router";
-import Header from "../components/Header";
 
 function Layout() {
   const { logado } = useAuth();
@@ -15,8 +14,8 @@ function Layout() {
   }, [logado, navigate]);
 
   return (
-    <div className="bg-blue-500">
-      <Header />
+    <div>
+      
       <main>
         <Outlet />
       </main>
