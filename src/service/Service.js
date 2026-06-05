@@ -35,6 +35,7 @@ export async function getNovidades() {
   }
 }
 
+// https://developer.themoviedb.org/reference/movie-popular-list
 export async function getPopulares() {
   try {
     const response = await axios({
@@ -43,6 +44,24 @@ export async function getPopulares() {
       params: {
         api_key: "a03dc348a47fa57d814f8290f647ee2c",
         language: "pt-BR"
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao carregar populares", error);
+    throw error;
+  }
+}
+
+// https://developer.themoviedb.org/reference/movie-details
+export async function getMovieDetails() {
+  try {
+    const response = await axios({
+      method: 'get',
+      url: `https://api.themoviedb.org/3/movie/{movie_id}`,
+      params: {
+        api_key: "a03dc348a47fa57d814f8290f647ee2c",
+      language: "pt-BR"
       },
     });
     return response.data;

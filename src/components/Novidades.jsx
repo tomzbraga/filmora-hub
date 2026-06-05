@@ -17,7 +17,7 @@ export default function Novidades() {
   return (
     <ul>
       {movies.map((movie) => (
-        <li>{movie.title}</li>
+        <li key={movie.id}>{movie.title}</li>
       ))}
     </ul>
   );
