@@ -58,7 +58,7 @@ export async function getMovieDetails() {
   try {
     const response = await axios({
       method: 'get',
-      url: `https://api.themoviedb.org/3/movie/{movie_id}`,
+      url: `https://api.themoviedb.org/3/movie/${movie_id}`,
       params: {
         api_key: "a03dc348a47fa57d814f8290f647ee2c",
       language: "pt-BR"
@@ -66,7 +66,25 @@ export async function getMovieDetails() {
     });
     return response.data;
   } catch (error) {
-    console.error("Erro ao carregar populares", error);
+    console.error("Erro ao carregar detalhes", error);
+    throw error;
+  }
+}
+
+// https://developer.themoviedb.org/reference/movie-similar
+export async function getSimilares() {
+  try {
+    const response = await axios({
+      method: 'get',
+      url: `https://api.themoviedb.org/3/movie/${movie_id}/similar`,
+      params: {
+        api_key: "a03dc348a47fa57d814f8290f647ee2c",
+        language: 'pt-BR'
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao carregar similares", error);
     throw error;
   }
 }
