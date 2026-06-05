@@ -16,7 +16,7 @@ movies.poster_path
 
 */
 
-// https://developer.themoviedb.org/reference/movie-now-playing-list
+// NOVIDADES https://developer.themoviedb.org/reference/movie-now-playing-list
 export async function getNovidades() {
   try {
     const response = await axios({
@@ -35,7 +35,7 @@ export async function getNovidades() {
   }
 }
 
-// https://developer.themoviedb.org/reference/movie-popular-list
+// FILMES POPULARES https://developer.themoviedb.org/reference/movie-popular-list
 export async function getPopulares() {
   try {
     const response = await axios({
@@ -53,7 +53,7 @@ export async function getPopulares() {
   }
 }
 
-// https://developer.themoviedb.org/reference/movie-details
+// DETALHES DO FILME https://developer.themoviedb.org/reference/movie-details
 export async function getMovieDetails() {
   try {
     const response = await axios({
@@ -71,7 +71,7 @@ export async function getMovieDetails() {
   }
 }
 
-// https://developer.themoviedb.org/reference/movie-similar
+// FILMES SIMILARES https://developer.themoviedb.org/reference/movie-similar
 export async function getSimilares() {
   try {
     const response = await axios({
@@ -89,7 +89,7 @@ export async function getSimilares() {
   }
 }
 
-// https://developer.themoviedb.org/reference/movie-credits
+// ELENCO https://developer.themoviedb.org/reference/movie-credits
 export async function getCreditos() {
   try {
     const response = await axios({
