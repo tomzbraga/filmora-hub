@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getNovidades } from "../service/Service";
 import MovieCard from "../components/MovieCard";
 import HeaderFavoritos from "../components/Header-favoritos";
+import Footer from "../components/Footer";
 
 function Recomendacao() {
   const [movies, setMovies] = useState([]);
@@ -20,8 +21,8 @@ function Recomendacao() {
   }, []);
 
   return (
-    <div className="w-full p-4 bg-black">
-    <HeaderFavoritos />
+    <div className="w-full p-4 pb-24 bg-[#09090B] min-h-screen">
+      <HeaderFavoritos />
       <p className="text-white text-sm mb-4 mt-4">Sua coleção de recomendados</p>
 
       {movies.length === 0 ? (
@@ -33,6 +34,7 @@ function Recomendacao() {
           ))}
         </div>
       )}
+      <Footer />
     </div>
   );
 }
