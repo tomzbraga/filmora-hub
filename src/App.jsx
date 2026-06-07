@@ -3,6 +3,7 @@ import "./App.css";
 import Login from "./pages/login";
 import Home from "./pages/home";
 import Layout from "./layout/Layout";
+import Recomendacao from "./pages/Recomendacao";
 import { useAuth } from "./contexts/AuthContext";
 
 function AppRoutes() {
@@ -18,6 +19,7 @@ function AppRoutes() {
           />
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/recomendacao" element={<Recomendacao />} />
       </Routes>
     </BrowserRouter>
   );
