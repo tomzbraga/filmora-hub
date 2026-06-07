@@ -1,11 +1,11 @@
-import Section from '../components/Section';
+import HeroBanner from '../components/HeroBanner';
 import HeaderHome from '../components/HeaderHome';
 import SearchBar from '../components/SearchBar';
 function Home() {
     return (
         <main className="bg-[#09090B] min-h-screen">
             <HeaderHome />
-         <Section />
+         <HeroBanner />
          <SearchBar/>
         </main>
     );
