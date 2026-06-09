@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 
 function Recomendacao() {
   const [movies, setMovies] = useState([]);
+  const [showNoMoviesMessage, setShowNoMoviesMessage] = useState(false);
 
   useEffect(() => {
     async function fetchMovies() {
@@ -18,6 +19,12 @@ function Recomendacao() {
     }
 
     fetchMovies();
+
+    const timer = setTimeout(() => {
+      setShowNoMoviesMessage(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -25,7 +32,7 @@ function Recomendacao() {
       <HeaderFavoritos />
       <p className="text-white text-sm mb-4 mt-4">Sua coleção de recomendados</p>
 
-      {movies.length === 0 ? (
+      {movies.length === 0 && showNoMoviesMessage ? (
         <p className="text-white text-center mt-8">Nenhum filme encontrado.</p>
       ) : (
         <div className="grid grid-cols-4 gap-4">

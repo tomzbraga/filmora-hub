@@ -8,7 +8,7 @@ function HeaderFavoritos() {
                 <div className="flex items-center justify-between px-6 max-w-full">
                     <ReturnButton />
                     <h1 className="text-white text-2xl font-bold text-center flex-1">
-                        Favoritos
+                        Recomendados
                     </h1>
                     <SearchButton />
                 </div>

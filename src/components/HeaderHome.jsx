@@ -9,9 +9,6 @@ function HeaderHome (){
                     <img src={logo} alt="Filmora" className="h-20 w-60" />
                 </div>
 
-                <button className="bg-gray-700 hover:bg-gray-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
-                    👤
-                </button>
             </div>
         </header>
     )
