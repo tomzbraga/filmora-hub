@@ -3,7 +3,8 @@ import "./App.css";
 import Login from "./pages/login";
 import Home from "./pages/home";
 import Layout from "./layout/Layout";
-import Recomendacao from "./pages/Recomendacao";
+import FilmesPopulares from "./pages/FilmesPopulares";
+import MovieSobre from "./pages/MovieSobre";
 import { useAuth } from "./contexts/AuthContext";
 
 function AppRoutes() {
@@ -19,7 +20,8 @@ function AppRoutes() {
           />
         </Route>
         <Route path="/login" element={<Login />} />
-        <Route path="/recomendacao" element={<Recomendacao />} />
+        <Route path="/populares" element={<FilmesPopulares />} />
+        <Route path="/filme/:movie_id" element={<MovieSobre />} />
       </Routes>
     </BrowserRouter>
   );

@@ -9,13 +9,13 @@ function Footer() {
     navigate("/");
   };
 
-  const handleRecomendados = () => {
-    navigate("/recomendacao");
+  const handlePopulares = () => {
+    navigate("/populares");
   };
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 z-20 bg-slate-950/95 border-t border-white/10 py-3 backdrop-blur-md">
-      <div className="mx-auto flex max-w-md items-center justify-between px-6 text-white">
+      <div className="mx-auto flex max-w-md items-center justify-center gap-16 px-6 text-white">
 
         <button 
           onClick={handleHome}
@@ -26,11 +26,11 @@ function Footer() {
         </button>
 
         <button 
-          onClick={handleRecomendados}
+          onClick={handlePopulares}
           className="flex flex-col items-center gap-1 text-xs text-white/70 hover:text-white"
         >
           <Heart size={20} />
-          <span>Recomendados</span>
+          <span>Populares</span>
         </button>
       </div>
     </footer>

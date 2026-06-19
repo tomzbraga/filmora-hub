@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { getNovidades } from "../service/Service";
 import MovieCard from "../components/MovieCard";
-import HeaderFavoritos from "../components/Header-favoritos";
+import HeaderRecomendados from "../components/Header-populares";
 import Footer from "../components/Footer";
 
-function Recomendacao() {
+function FilmesPopulares() {
   const [movies, setMovies] = useState([]);
   const [showNoMoviesMessage, setShowNoMoviesMessage] = useState(false);
 
@@ -29,8 +29,8 @@ function Recomendacao() {
 
   return (
     <div className="w-full p-4 pb-24 bg-[#09090B] min-h-screen">
-      <HeaderFavoritos />
-      <p className="text-white text-sm mb-4 mt-4">Sua coleção de recomendados</p>
+      <HeaderRecomendados />
+      <p className="text-white text-sm mb-4 mt-4">Sua coleção de populares</p>
 
       {movies.length === 0 && showNoMoviesMessage ? (
         <p className="text-white text-center mt-8">Nenhum filme encontrado.</p>
@@ -46,4 +46,4 @@ function Recomendacao() {
   );
 }
 
-export default Recomendacao;
+export default FilmesPopulares;
