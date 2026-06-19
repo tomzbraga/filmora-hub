@@ -41,7 +41,7 @@ function FormLogin() {
   };
 
   return (
-    <form onSubmit={trataSubmit}>
+    <form onSubmit={trataSubmit} className="flex flex-col gap-5">
       <InputLogin
         email={email}
         erro={emailErro}

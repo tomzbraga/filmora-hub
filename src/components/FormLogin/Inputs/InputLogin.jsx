@@ -1,24 +1,24 @@
-function InputLogin({ login, erro, mudaValor }) {
+function InputLogin({ email, erro, mudaValor }) {
   return (
     <div className="flex flex-col mb-4">
       <label
-        htmlFor="matricula"
-        className="text-sm font-medium text-gray-700 mb-1 text-left"
+        htmlFor="email"
+        className="text-sm font-medium text-white/80 mb-1 text-left"
       >
-        Login
+        Email
       </label>
 
       <input
-        className="border rounded-lg w-full p-2"
+        className="border border-white/30 rounded-lg w-full p-2 bg-transparent text-white text-center placeholder-white/40 focus:outline-none focus:border-white/60 transition-colors"
         type="email"
         id="email"
         name="email"
         placeholder="Digite seu e-mail"
-        value={login}
+        value={email}
         onChange={mudaValor}
       />
 
-      {erro && <p className="text-red-500 text-xs mt-1">{erro}</p>}
+      {erro && <p className="text-red-400 text-xs mt-1">{erro}</p>}
     </div>
   );
 }

@@ -3,14 +3,14 @@ function InputSenha({ senha, erro, mudaValor }) {
     <div className="flex flex-col mb-4">
       <label
         htmlFor="senha"
-        className="text-sm font-medium text-gray-700 mb-1 text-left"
+        className="text-sm font-medium text-white/80 mb-1 text-left"
       >
         Senha
       </label>
 
       <input
-        className="border rounded-lg w-full p-2"
-        type="number"
+        className="border border-white/30 rounded-lg w-full p-2 bg-transparent text-white text-center placeholder-white/40 focus:outline-none focus:border-white/60 transition-colors"
+        type="password"
         id="senha"
         name="senha"
         placeholder="Digite sua senha"
@@ -18,7 +18,7 @@ function InputSenha({ senha, erro, mudaValor }) {
         onChange={mudaValor}
       />
 
-      {erro && <p className="text-red-500 text-xs mt-1">{erro}</p>}
+      {erro && <p className="text-red-400 text-xs mt-1">{erro}</p>}
     </div>
   );
 }
