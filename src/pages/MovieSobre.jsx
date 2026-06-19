@@ -6,6 +6,7 @@ import Sinopse from "../components/Sinopse";
 import Elenco from "../components/Elenco";
 import Footer from "../components/Footer";
 import Populares from "../components/Populares";
+import HeaderHome from "../components/HeaderHome";
 
 function MovieSobre() {
   const { movie_id } = useParams();
@@ -34,6 +35,10 @@ function MovieSobre() {
 
   return (
     <div className="bg-[#09090B] min-h-screen pb-24">
+      <div className="hidden md:block">
+        <HeaderHome />
+      </div>
+
       <MovieCardSobre movie={movie} />
       <Sinopse overview={movie.overview} />
       <Elenco cast={movie.credits?.cast} />

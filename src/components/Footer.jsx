@@ -14,7 +14,7 @@ function Footer() {
   };
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-20 bg-slate-950/95 border-t border-white/10 py-3 backdrop-blur-md">
+    <footer className="fixed bottom-0 left-0 right-0 z-20 bg-slate-950/95 border-t border-white/10 py-3 backdrop-blur-md md:hidden">
       <div className="mx-auto flex max-w-md items-center justify-center gap-16 px-6 text-white">
 
         <button 
