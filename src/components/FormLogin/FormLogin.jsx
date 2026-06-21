@@ -6,8 +6,8 @@ import InputSubmit from "./Inputs/InputSubmit";
 import InputLogin from "./Inputs/InputLogin";
 
 function FormLogin() {
-  const [email, setEmail] = useState("");
-  const [emailErro, setEmailErro] = useState("");
+  const [user, setUser] = useState("");
+  const [userErro, setUserErro] = useState("");
   const [senha, setSenha] = useState("");
   const [senhaErro, setSenhaErro] = useState("");
   const navigate = useNavigate();
@@ -17,11 +17,11 @@ function FormLogin() {
     e.preventDefault();
     let valido = true;
 
-    if (!email) {
-      setEmailErro("E-mail é obrigatório");
+    if (!user) {
+      setUserErro("Login é obrigatório");
       valido = false;
     } else {
-      setEmailErro("");
+      setUserErro("");
     }
 
     if (!senha) {
@@ -35,7 +35,7 @@ function FormLogin() {
     }
 
     if (valido) {
-      login({ email });
+      login({ user });
       navigate("/");
     }
   };
@@ -43,9 +43,9 @@ function FormLogin() {
   return (
     <form onSubmit={trataSubmit} className="flex flex-col gap-5">
       <InputLogin
-        email={email}
-        erro={emailErro}
-        mudaValor={(e) => setEmail(e.target.value)}
+        user={login}
+        erro={userErro}
+        mudaValor={(e) => setUser(e.target.value)}
       />
 
       <InputSenha

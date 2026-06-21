@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 import { getPopulares } from "../service/Service";
 import MovieCard from "./MovieCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -29,7 +29,12 @@ export default function Populares() {
   return (
     <div className="w-full md:max-w-6xl md:mx-auto">
       <div className="border-t border-white pt-4 mt-2 px-0 md:px-6">
-        <h2 className="text-white text-2xl font-bold mb-2">Populares</h2>
+        <Link
+          to="/populares"
+          className="inline-block text-white text-2xl font-bold mb-2 hover:underline"
+        >
+          Populares
+        </Link>
 
         <div className="relative">
           <button

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate, Link } from "react-router";
 import { getNovidades } from "../service/Service";
 import MovieCard from "./MovieCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -27,7 +28,12 @@ export default function Novidades() {
   return (
     <div className="w-full md:max-w-6xl md:mx-auto">
       <div className="border-t border-white pt-4 mt-2 px-0 md:px-6">
-        <h2 className="text-white text-2xl font-bold mb-2">Novidades</h2>
+        <Link
+          to="/novidades"
+          className="inline-block text-white text-2xl font-bold mb-2 hover:underline"
+        >
+          Novidades
+        </Link>
 
         <div className="relative">
           <button
