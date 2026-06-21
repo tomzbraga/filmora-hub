@@ -6,6 +6,7 @@ import Layout from "./layout/Layout";
 import FilmesPopulares from "./pages/FilmesPopulares";
 import FilmesNovidades from "./pages/FilmesNovidades";
 import MovieSobre from "./pages/MovieSobre";
+import QueroVerPage from "./pages/QueroVerPage";
 import { useAuth } from "./contexts/AuthContext";
 
 function AppRoutes() {
@@ -13,15 +14,17 @@ function AppRoutes() {
 
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
+
       <Route element={<Layout />}>
         <Route
           path="/"
           element={logado ? <Home /> : <Navigate to="/login" replace />}
         />
-        <Route path="/login" element={<Login />} />
         <Route path="/populares" element={<FilmesPopulares />} />
         <Route path="/novidades" element={<FilmesNovidades />} />
         <Route path="/filme/:movie_id" element={<MovieSobre />} />
+        <Route path="/quero-ver" element={<QueroVerPage />} />
       </Route>
     </Routes>
   );
