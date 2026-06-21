@@ -29,6 +29,9 @@ function HeaderHome() {
           <Link to="/novidades" className="underline hover:text-white/80">
             Novidades
           </Link>
+          <Link to="/quero-ver" className="underline hover:text-white/80">
+            Quero Ver
+          </Link>
 
           {/* <div className="hidden md:block w-64">
             <SearchBar />

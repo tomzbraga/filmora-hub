@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Trash2 } from "lucide-react";
 import { getQueroVer, removerQueroVer } from "../service/queroVerService";
+import HeaderHome from "../components/HeaderHome";
 
 function QueroVerPage() {
   const [lista, setLista] = useState([]);
@@ -39,6 +40,7 @@ function QueroVerPage() {
 
   return (
     <div className="px-4 py-6 md:max-w-6xl md:mx-auto">
+      <HeaderHome/>
       <h1 className="text-white text-2xl font-bold mb-6">Quero Ver</h1>
 
       {lista.length === 0 ? (
