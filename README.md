@@ -1,16 +1,112 @@
-# React + Vite
+# Projeto React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido utilizando **React** e **Vite** no frontend e **Node.js + Express** no backend.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Antes de iniciar, certifique-se de ter instalado:
 
-## React Compiler
+- Node.js (versão 18 ou superior)
+- npm
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Como executar o projeto
 
-## Expanding the ESLint configuration
+### 1. Clone o repositório
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone <URL_DO_REPOSITORIO>
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd <NOME_DO_PROJETO>
+```
+
+### 2. Instale as dependências do frontend
+
+```bash
+npm install
+```
+
+
+
+### 4. Inicie o frontend
+
+Na pasta principal do projeto, execute:
+
+```bash
+npm run dev
+```
+
+O frontend ficará disponível em:
+
+```
+http://localhost:5173
+```
+
+### 5. Inicie o backend
+
+Abra um **novo terminal**, entre na pasta do backend:
+
+```bash
+cd backend
+```
+### . Instale as dependências do backend
+
+Caso ainda não estejam instaladas, execute:
+
+```bash
+npm install express cors
+```
+
+Em seguida execute:
+
+```bash
+node server.js
+```
+
+> Caso o arquivo tenha outro nome (por exemplo `serve.js`), utilize:
+
+```bash
+node serve.js
+```
+
+## 📂 Estrutura do projeto
+
+```
+FILMORA-HUB/
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── ...
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── contexts/
+│   ├── layout/
+│   ├── pages/
+│   ├── service/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── ...
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+
+## Tecnologias utilizadas
+
+- React
+- Vite
+- JavaScript
+- Node.js
+- Express
+- CORS
