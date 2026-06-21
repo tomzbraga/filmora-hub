@@ -44,8 +44,7 @@ function MovieCardSobre({ movie }) {
     verificarLista();
   }, [id]);
 
-  async function handleQueroVer(e) {
-    e.preventDefault();
+  async function handleQueroVer() {
     setCarregando(true);
     try {
       if (isFavorite) {
@@ -104,10 +103,7 @@ function MovieCardSobre({ movie }) {
             </p>
           )}
 
-          <form
-            onSubmit={handleQueroVer}
-            className="mt-6 flex items-center gap-3 justify-center md:justify-start"
-          >
+          <div className="mt-6 flex items-center gap-3 justify-center md:justify-start">
             {!isFavorite && (
               <select
                 value={prioridade}
@@ -121,14 +117,15 @@ function MovieCardSobre({ movie }) {
             )}
 
             <button
-              type="submit"
+              type="button"
+              onClick={handleQueroVer}
               disabled={carregando}
               className="flex items-center gap-2 rounded-full px-4 py-2 bg-pink-600/80 hover:bg-pink-600 transition-colors text-sm font-medium disabled:opacity-50"
             >
               <Heart size={16} className={isFavorite ? "fill-white" : ""} />
               {isFavorite ? "Remover da lista" : "Quero ver"}
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
