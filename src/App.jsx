@@ -11,19 +11,17 @@ function AppRoutes() {
   const { logado } = useAuth();
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route
-            path="/"
-            element={logado ? <Home /> : <Navigate to="/login" replace />}
-          />
-        </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/populares" element={<FilmesPopulares />} />
-        <Route path="/filme/:movie_id" element={<MovieSobre />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route
+          path="/"
+          element={logado ? <Home /> : <Navigate to="/login" replace />}
+        />
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/populares" element={<FilmesPopulares />} />
+      <Route path="/filme/:movie_id" element={<MovieSobre />} />
+    </Routes>
   );
 }
 
