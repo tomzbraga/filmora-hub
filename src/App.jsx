@@ -18,11 +18,11 @@ function AppRoutes() {
           path="/"
           element={logado ? <Home /> : <Navigate to="/login" replace />}
         />
+        <Route path="/login" element={<Login />} />
+        <Route path="/populares" element={<FilmesPopulares />} />
+        <Route path="/novidades" element={<FilmesNovidades />} />
+        <Route path="/filme/:movie_id" element={<MovieSobre />} />
       </Route>
-      <Route path="/login" element={<Login />} />
-      <Route path="/populares" element={<FilmesPopulares />} />
-      <Route path="/novidades" element={<FilmesNovidades />} />
-      <Route path="/filme/:movie_id" element={<MovieSobre />} />
     </Routes>
   );
 }

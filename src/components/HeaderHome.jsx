@@ -19,6 +19,21 @@ function HeaderHome() {
           </Link>
         </div>
 
+        <nav className="hidden md:flex items-center gap-8 text-white text-sm">
+          <Link to="/" className="underline hover:text-white/80">
+            Início
+          </Link>
+          <Link to="/populares" className="underline hover:text-white/80">
+            Populares
+          </Link>
+          <Link to="/novidades" className="underline hover:text-white/80">
+            Novidades
+          </Link>
+
+          {/* <div className="hidden md:block w-64">
+            <SearchBar />
+          </div> */}
+        </nav>
         <button
           type="button"
           onClick={logout}
@@ -26,19 +41,6 @@ function HeaderHome() {
         >
           Sair
         </button>
-
-        {/*  <nav className="hidden md:flex items-center gap-8 text-white text-sm">
-          <Link to="/" className="underline hover:text-white/80">
-            Início
-          </Link>
-          <Link to="/populares" className="underline hover:text-white/80">
-            Populares
-          </Link>
-
-        <div className="hidden md:block w-64">
-          <SearchBar />
-        </div>
-        </nav>*/}
       </div>
     </header>
   );
