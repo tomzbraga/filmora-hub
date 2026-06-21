@@ -7,6 +7,7 @@ import FilmesPopulares from "./pages/FilmesPopulares";
 import FilmesNovidades from "./pages/FilmesNovidades";
 import MovieSobre from "./pages/MovieSobre";
 import QueroVerPage from "./pages/QueroVerPage";
+import NotFound from "./pages/NotFound";
 import { useAuth } from "./contexts/AuthContext";
 
 function AppRoutes() {
@@ -19,13 +20,14 @@ function AppRoutes() {
       <Route element={<Layout />}>
         <Route
           path="/"
-          element={logado ? <Home /> : <Navigate to="/login" replace />}
+          element={logado ? <Home /> : <Navigate to="*" replace />}
         />
         <Route path="/populares" element={<FilmesPopulares />} />
         <Route path="/novidades" element={<FilmesNovidades />} />
         <Route path="/filme/:movie_id" element={<MovieSobre />} />
         <Route path="/quero-ver" element={<QueroVerPage />} />
       </Route>
+        <Route path="*" element={<NotFound/>} />
     </Routes>
   );
 }

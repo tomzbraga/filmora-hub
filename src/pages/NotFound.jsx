@@ -2,7 +2,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-50 flex items-center justify-center px-6">
       <div className="max-w-md text-center">
-        <p className="text-7xl sm:text-8xl font-extrabold text-orange-500 tracking-tighter leading-none mb-2">
+        <p className="text-7xl sm:text-8xl font-extrabold text-purple-500 tracking-tighter leading-none mb-2">
           404
         </p>
         <h1 className="text-xl font-semibold mb-3">
@@ -13,7 +13,7 @@ export default function NotFound() {
         </p>
         <a
           href="/"
-          className="inline-block bg-orange-500 text-neutral-950 font-semibold px-7 py-3 rounded-md hover:opacity-90 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-50"
+          className="inline-block bg-purple-500 text-neutral-950 font-semibold px-7 py-3 rounded-md hover:opacity-90 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-50"
         >
           Voltar ao início
         </a>
