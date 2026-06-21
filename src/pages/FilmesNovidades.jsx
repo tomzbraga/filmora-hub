@@ -12,7 +12,7 @@ function FilmesNovidades() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const dados = await getPopulares();
+        const dados = await getNovidades();
         setMovies(dados.results || []);
       } catch (error) {
         console.error(error);
@@ -37,12 +37,10 @@ function FilmesNovidades() {
       </div>
 
       <div className="md:max-w-6xl md:mx-auto md:px-6">
-        <p className="text-white text-sm mb-4 mt-4 md:hidden">
-          Sua coleção de populares
-        </p>
+        <p className="text-white text-sm mb-4 mt-4 md:hidden">Em cartaz</p>
 
         <h1 className="hidden md:block text-white text-5xl font-bold text-center mt-10 mb-10">
-          Populares
+          Novidades
         </h1>
 
         {movies.length === 0 && showNoMoviesMessage ? (
@@ -63,4 +61,4 @@ function FilmesNovidades() {
   );
 }
 
-export default FilmesPopulares;
+export default FilmesNovidades;
