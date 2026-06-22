@@ -20,7 +20,7 @@ function AppRoutes() {
       <Route element={<Layout />}>
         <Route
           path="/"
-          element={logado ? <Home /> : <Navigate to="*" replace />}
+          element={logado ? <Home /> : <Navigate to="/login" replace />}
         />
         <Route path="/populares" element={<FilmesPopulares />} />
         <Route path="/novidades" element={<FilmesNovidades />} />
